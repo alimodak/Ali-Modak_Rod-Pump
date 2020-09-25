@@ -6,7 +6,7 @@
 
 #### Setting up your environment on Windows:
 
-Check if Python is installed by running `python --version` from the command prompt.
+Check if Python 3 is installed by running `python --version` from the command prompt.
 
 If it is not yet installed, download and install python from <https://www.python.org/downloads/windows>.  Click on Python 3.8.6 and scroll down until you find the executable installer.
 
@@ -30,11 +30,11 @@ Check if Python is installed by running `python3 --version`.
 
 Clone the github repository to your local machine and navigate to the repository in command prompt.
 
-Update pip using `python -m pip install --upgrade pip`.
+Update pip using `python3 -m pip install --upgrade pip`.
 
-Install virtualenv using `python -m pip install --user virtualenv`.
+Install virtualenv using `python3 -m pip install --user virtualenv`.
 
-Create a new virtualenv in the cloned repository using `python -m venv venv`.
+Create a new virtualenv in the cloned repository using `python3 -m venv venv`.
 
 Source the virtual environment: `source venv/bin/activate`.
 
