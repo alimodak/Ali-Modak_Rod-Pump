@@ -18,11 +18,11 @@
     <datasource caption='rodpump_dates' inline='true' name='federated.0sox2n80is1ljp13zlba402k0a6u' version='18.1'>
       <connection class='federated'>
         <named-connections>
-          <named-connection caption='rodpump_dates' name='textscan.0z1572i0zudzvk169hcf70dihp6v'>
-            <connection class='textscan' directory='/Users/masonma/Desktop/UT/nsc325/rodpump' filename='rodpump_dates.csv' password='' server='' />
+          <named-connection caption='rodpump_raw' name='textscan.161imuy1quro4x15w2dgk15yssqx'>
+            <connection class='textscan' directory='/Users/masonma/Desktop/UT/nsc325/rodpump' filename='rodpump_raw.csv' password='' server='' />
           </named-connection>
         </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0z1572i0zudzvk169hcf70dihp6v' name='rodpump_dates.csv' table='[rodpump_dates#csv]' type='table'>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.161imuy1quro4x15w2dgk15yssqx' name='rodpump_raw.csv' table='[rodpump_raw#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
             <column datatype='string' name='roduid' ordinal='0' />
             <column datatype='string' name='UWI' ordinal='1' />
@@ -81,7 +81,7 @@
             <column datatype='string' name='gasanchor_od' ordinal='54' />
           </columns>
         </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0z1572i0zudzvk169hcf70dihp6v' name='rodpump_dates.csv' table='[rodpump_dates#csv]' type='table'>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.161imuy1quro4x15w2dgk15yssqx' name='rodpump_raw.csv' table='[rodpump_raw#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
             <column datatype='string' name='roduid' ordinal='0' />
             <column datatype='string' name='UWI' ordinal='1' />
@@ -144,7 +144,7 @@
           <metadata-record class='capability'>
             <remote-name />
             <remote-type>0</remote-type>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias />
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
@@ -161,7 +161,7 @@
             <remote-name>roduid</remote-name>
             <remote-type>129</remote-type>
             <local-name>[roduid]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>roduid</remote-alias>
             <ordinal>0</ordinal>
             <local-type>string</local-type>
@@ -170,13 +170,13 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>UWI</remote-name>
             <remote-type>129</remote-type>
             <local-name>[UWI]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>UWI</remote-alias>
             <ordinal>1</ordinal>
             <local-type>string</local-type>
@@ -185,13 +185,13 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>NODEID</remote-name>
             <remote-type>129</remote-type>
             <local-name>[NODEID]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>NODEID</remote-alias>
             <ordinal>2</ordinal>
             <local-type>string</local-type>
@@ -200,13 +200,13 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>IDWELL</remote-name>
             <remote-type>129</remote-type>
             <local-name>[IDWELL]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>IDWELL</remote-alias>
             <ordinal>3</ordinal>
             <local-type>string</local-type>
@@ -215,13 +215,13 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>tbguid</remote-name>
             <remote-type>129</remote-type>
             <local-name>[tbguid]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>tbguid</remote-alias>
             <ordinal>4</ordinal>
             <local-type>string</local-type>
@@ -230,37 +230,37 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>lifetime_start</remote-name>
             <remote-type>133</remote-type>
             <local-name>[lifetime_start]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>lifetime_start</remote-alias>
             <ordinal>5</ordinal>
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>lifetime_end</remote-name>
             <remote-type>133</remote-type>
             <local-name>[lifetime_end]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>lifetime_end</remote-alias>
             <ordinal>6</ordinal>
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>IDRECJOBPULL</remote-name>
             <remote-type>129</remote-type>
             <local-name>[IDRECJOBPULL]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>IDRECJOBPULL</remote-alias>
             <ordinal>7</ordinal>
             <local-type>string</local-type>
@@ -269,13 +269,13 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>REPORTTO</remote-name>
             <remote-type>129</remote-type>
             <local-name>[REPORTTO]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>REPORTTO</remote-alias>
             <ordinal>8</ordinal>
             <local-type>string</local-type>
@@ -284,25 +284,25 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>FAILSTART</remote-name>
             <remote-type>133</remote-type>
             <local-name>[FAILSTART]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>FAILSTART</remote-alias>
             <ordinal>9</ordinal>
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>FAILURETYPE</remote-name>
             <remote-type>129</remote-type>
             <local-name>[FAILURETYPE]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>FAILURETYPE</remote-alias>
             <ordinal>10</ordinal>
             <local-type>string</local-type>
@@ -311,97 +311,97 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>H2S_CONCENTRATION</remote-name>
             <remote-type>5</remote-type>
             <local-name>[H2S_CONCENTRATION]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>H2S_CONCENTRATION</remote-alias>
             <ordinal>11</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>PrimarySetpoint</remote-name>
             <remote-type>5</remote-type>
             <local-name>[PrimarySetpoint]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>PrimarySetpoint</remote-alias>
             <ordinal>12</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SecondarySetpoint</remote-name>
             <remote-type>20</remote-type>
             <local-name>[SecondarySetpoint]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>SecondarySetpoint</remote-alias>
             <ordinal>13</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>StrokeLength</remote-name>
             <remote-type>5</remote-type>
             <local-name>[StrokeLength]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>StrokeLength</remote-alias>
             <ordinal>14</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>GrossStrokeLength</remote-name>
             <remote-type>5</remote-type>
             <local-name>[GrossStrokeLength]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>GrossStrokeLength</remote-alias>
             <ordinal>15</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Fillage</remote-name>
             <remote-type>5</remote-type>
             <local-name>[Fillage]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>Fillage</remote-alias>
             <ordinal>16</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>YesterdaysAverageSPM</remote-name>
             <remote-type>5</remote-type>
             <local-name>[YesterdaysAverageSPM]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>YesterdaysAverageSPM</remote-alias>
             <ordinal>17</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>bha_configuration</remote-name>
             <remote-type>129</remote-type>
             <local-name>[bha_configuration]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>bha_configuration</remote-alias>
             <ordinal>18</ordinal>
             <local-type>string</local-type>
@@ -410,133 +410,133 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>chemgroup1_any</remote-name>
             <remote-type>20</remote-type>
             <local-name>[chemgroup1_any]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>chemgroup1_any</remote-alias>
             <ordinal>19</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>chemgroup1_all</remote-name>
             <remote-type>20</remote-type>
             <local-name>[chemgroup1_all]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>chemgroup1_all</remote-alias>
             <ordinal>20</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>chemgroup2_any</remote-name>
             <remote-type>20</remote-type>
             <local-name>[chemgroup2_any]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>chemgroup2_any</remote-alias>
             <ordinal>21</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>chemgroup2_all</remote-name>
             <remote-type>20</remote-type>
             <local-name>[chemgroup2_all]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>chemgroup2_all</remote-alias>
             <ordinal>22</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>chemgroup3_any</remote-name>
             <remote-type>20</remote-type>
             <local-name>[chemgroup3_any]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>chemgroup3_any</remote-alias>
             <ordinal>23</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>chemgroup3_all</remote-name>
             <remote-type>20</remote-type>
             <local-name>[chemgroup3_all]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>chemgroup3_all</remote-alias>
             <ordinal>24</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>max_unguided_dls</remote-name>
             <remote-type>5</remote-type>
             <local-name>[max_unguided_dls]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>max_unguided_dls</remote-alias>
             <ordinal>25</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>dls_high_in_hole</remote-name>
             <remote-type>5</remote-type>
             <local-name>[dls_high_in_hole]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>dls_high_in_hole</remote-alias>
             <ordinal>26</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>gas_anchor_length</remote-name>
             <remote-type>5</remote-type>
             <local-name>[gas_anchor_length]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>gas_anchor_length</remote-alias>
             <ordinal>27</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>MAX_INCLINATION</remote-name>
             <remote-type>5</remote-type>
             <local-name>[MAX_INCLINATION]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>MAX_INCLINATION</remote-alias>
             <ordinal>28</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>wellbore_category</remote-name>
             <remote-type>129</remote-type>
             <local-name>[wellbore_category]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>wellbore_category</remote-alias>
             <ordinal>29</ordinal>
             <local-type>string</local-type>
@@ -545,13 +545,13 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>manual_scale</remote-name>
             <remote-type>129</remote-type>
             <local-name>[manual_scale]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>manual_scale</remote-alias>
             <ordinal>30</ordinal>
             <local-type>string</local-type>
@@ -560,13 +560,13 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>packer_vs_tac</remote-name>
             <remote-type>129</remote-type>
             <local-name>[packer_vs_tac]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>packer_vs_tac</remote-alias>
             <ordinal>31</ordinal>
             <local-type>string</local-type>
@@ -575,109 +575,109 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>AVG_PRESS_FLOWLINE</remote-name>
             <remote-type>5</remote-type>
             <local-name>[AVG_PRESS_FLOWLINE]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>AVG_PRESS_FLOWLINE</remote-alias>
             <ordinal>32</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>AVG_PRESSURE_TUBING</remote-name>
             <remote-type>5</remote-type>
             <local-name>[AVG_PRESSURE_TUBING]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>AVG_PRESSURE_TUBING</remote-alias>
             <ordinal>33</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>AVG_PRESSURE_CASING</remote-name>
             <remote-type>5</remote-type>
             <local-name>[AVG_PRESSURE_CASING]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>AVG_PRESSURE_CASING</remote-alias>
             <ordinal>34</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>AVG_DIFFERENTIAL_PRESSURE</remote-name>
             <remote-type>5</remote-type>
             <local-name>[AVG_DIFFERENTIAL_PRESSURE]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>AVG_DIFFERENTIAL_PRESSURE</remote-alias>
             <ordinal>35</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>AVG_OIL_VOLUME</remote-name>
             <remote-type>5</remote-type>
             <local-name>[AVG_OIL_VOLUME]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>AVG_OIL_VOLUME</remote-alias>
             <ordinal>36</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>AVG_WATER_VOLUME</remote-name>
             <remote-type>5</remote-type>
             <local-name>[AVG_WATER_VOLUME]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>AVG_WATER_VOLUME</remote-alias>
             <ordinal>37</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>AVG_LIQUID_VOLUME</remote-name>
             <remote-type>5</remote-type>
             <local-name>[AVG_LIQUID_VOLUME]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>AVG_LIQUID_VOLUME</remote-alias>
             <ordinal>38</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>AVG_WATERSG</remote-name>
             <remote-type>5</remote-type>
             <local-name>[AVG_WATERSG]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>AVG_WATERSG</remote-alias>
             <ordinal>39</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>rod_sinker_type</remote-name>
             <remote-type>129</remote-type>
             <local-name>[rod_sinker_type]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>rod_sinker_type</remote-alias>
             <ordinal>40</ordinal>
             <local-type>string</local-type>
@@ -686,25 +686,25 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>rod_has_guides</remote-name>
             <remote-type>11</remote-type>
             <local-name>[rod_has_guides]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>rod_has_guides</remote-alias>
             <ordinal>41</ordinal>
             <local-type>boolean</local-type>
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>rod_make</remote-name>
             <remote-type>129</remote-type>
             <local-name>[rod_make]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>rod_make</remote-alias>
             <ordinal>42</ordinal>
             <local-type>string</local-type>
@@ -713,13 +713,13 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>rod_apigrade</remote-name>
             <remote-type>129</remote-type>
             <local-name>[rod_apigrade]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>rod_apigrade</remote-alias>
             <ordinal>43</ordinal>
             <local-type>string</local-type>
@@ -728,61 +728,61 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>ROUTE</remote-name>
             <remote-type>20</remote-type>
             <local-name>[ROUTE]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>ROUTE</remote-alias>
             <ordinal>44</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>overall_max_sideload</remote-name>
             <remote-type>5</remote-type>
             <local-name>[overall_max_sideload]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>overall_max_sideload</remote-alias>
             <ordinal>45</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>shallow_max_sideload</remote-name>
             <remote-type>5</remote-type>
             <local-name>[shallow_max_sideload]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>shallow_max_sideload</remote-alias>
             <ordinal>46</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>max_unguided_sideload</remote-name>
             <remote-type>5</remote-type>
             <local-name>[max_unguided_sideload]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>max_unguided_sideload</remote-alias>
             <ordinal>47</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>DESANDDEGAS_TYP</remote-name>
             <remote-type>129</remote-type>
             <local-name>[DESANDDEGAS_TYP]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>DESANDDEGAS_TYP</remote-alias>
             <ordinal>48</ordinal>
             <local-type>string</local-type>
@@ -791,73 +791,73 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>CHROME_LENGTH</remote-name>
             <remote-type>5</remote-type>
             <local-name>[CHROME_LENGTH]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>CHROME_LENGTH</remote-alias>
             <ordinal>49</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>ENDURALLOY_LENGTH</remote-name>
             <remote-type>5</remote-type>
             <local-name>[ENDURALLOY_LENGTH]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>ENDURALLOY_LENGTH</remote-alias>
             <ordinal>50</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>POLY_LENGTH</remote-name>
             <remote-type>5</remote-type>
             <local-name>[POLY_LENGTH]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>POLY_LENGTH</remote-alias>
             <ordinal>51</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>NIPPLE_SET_DEPTH</remote-name>
             <remote-type>5</remote-type>
             <local-name>[NIPPLE_SET_DEPTH]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>NIPPLE_SET_DEPTH</remote-alias>
             <ordinal>52</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>pump_bore</remote-name>
             <remote-type>5</remote-type>
             <local-name>[pump_bore]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>pump_bore</remote-alias>
             <ordinal>53</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>gasanchor_od</remote-name>
             <remote-type>129</remote-type>
             <local-name>[gasanchor_od]</local-name>
-            <parent-name>[rodpump_dates.csv]</parent-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
             <remote-alias>gasanchor_od</remote-alias>
             <ordinal>54</ordinal>
             <local-type>string</local-type>
@@ -866,7 +866,7 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
         </metadata-records>
       </connection>
@@ -901,7 +901,7 @@
       <column caption='Secondary Setpoint' datatype='integer' name='[SecondarySetpoint]' role='measure' type='quantitative' />
       <column caption='Stroke Length' datatype='real' name='[StrokeLength]' role='measure' type='quantitative' />
       <column caption='Yesterdays Average SPM' datatype='real' name='[YesterdaysAverageSPM]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='rodpump_dates.csv' datatype='table' name='[__tableau_internal_object_id__].[rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='rodpump_raw.csv' datatype='table' name='[__tableau_internal_object_id__].[rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41]' role='measure' type='quantitative' />
       <column caption='Bha Configuration' datatype='string' name='[bha_configuration]' role='dimension' type='nominal' />
       <column caption='Chemgroup1 All' datatype='integer' name='[chemgroup1_all]' role='measure' type='quantitative' />
       <column caption='Chemgroup1 Any' datatype='integer' name='[chemgroup1_any]' role='measure' type='quantitative' />
@@ -928,7 +928,6 @@
       <column caption='Shallow Max Sideload' datatype='real' name='[shallow_max_sideload]' role='measure' type='quantitative' />
       <column caption='Tbguid' datatype='string' name='[tbguid]' role='dimension' type='nominal' />
       <column caption='Wellbore Category' datatype='string' name='[wellbore_category]' role='dimension' type='nominal' />
-      <column-instance column='[dls_high_in_hole]' derivation='None' name='[none:dls_high_in_hole:qk]' pivot='key' type='quantitative' />
       <column-instance column='[max_unguided_sideload]' derivation='None' name='[none:max_unguided_sideload:qk]' pivot='key' type='quantitative' />
       <column-instance column='[overall_max_sideload]' derivation='None' name='[none:overall_max_sideload:qk]' pivot='key' type='quantitative' />
       <column-instance column='[rod_has_guides]' derivation='None' name='[none:rod_has_guides:nk]' pivot='key' type='nominal' />
@@ -946,9 +945,9 @@
       </semantic-values>
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
-          <object caption='rodpump_dates.csv' id='rodpump_dates.csv_0827C925D89B451E9C87D097DFCBBF4A'>
+          <object caption='rodpump_raw.csv' id='rodpump_raw.csv_22C0D3549B1641048EC664D86BDC0E41'>
             <properties context=''>
-              <relation connection='textscan.0z1572i0zudzvk169hcf70dihp6v' name='rodpump_dates.csv' table='[rodpump_dates#csv]' type='table'>
+              <relation connection='textscan.161imuy1quro4x15w2dgk15yssqx' name='rodpump_raw.csv' table='[rodpump_raw#csv]' type='table'>
                 <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
                   <column datatype='string' name='roduid' ordinal='0' />
                   <column datatype='string' name='UWI' ordinal='1' />
@@ -1117,7 +1116,7 @@
     </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Guided vs Unguided Sideloads'>
+    <window class='worksheet' name='Guided vs Unguided Sideloads'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1154,7 +1153,7 @@
       </viewpoint>
       <simple-id uuid='{2A4EBBED-DAC9-4536-BE85-77F95252BF4A}' />
     </window>
-    <window class='worksheet' name='Sideload and Inclination'>
+    <window class='worksheet' maximized='true' name='Sideload and Inclination'>
       <cards>
         <edge name='left'>
           <strip size='160'>
