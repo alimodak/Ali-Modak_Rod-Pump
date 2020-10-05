@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
-<!-- build 20202.20.0525.1210                               -->
-<workbook original-version='18.1' source-build='2020.2.1 (20202.20.0525.1210)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<!-- build 20202.20.0818.0857                               -->
+<workbook original-version='18.1' source-build='2020.2.5 (20202.20.0818.0857)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <_.fcp.MarkAnimation.true...MarkAnimation />
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
@@ -892,6 +892,9 @@
       <column caption='Idrecjobpull' datatype='string' name='[IDRECJOBPULL]' role='dimension' type='nominal' />
       <column caption='Idwell' datatype='string' name='[IDWELL]' role='dimension' type='nominal' />
       <column caption='Max Inclination' datatype='real' name='[MAX_INCLINATION]' role='measure' type='quantitative' />
+      <column aggregation='None' caption='Max Unguided Dls (bin)' datatype='integer' name='[Max Unguided Dls (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[max_unguided_dls]' peg='0' size='1' />
+      </column>
       <column caption='Nipple Set Depth' datatype='real' name='[NIPPLE_SET_DEPTH]' role='measure' type='quantitative' />
       <column caption='Nodeid' datatype='string' name='[NODEID]' role='dimension' type='nominal' />
       <column caption='Poly Length' datatype='real' name='[POLY_LENGTH]' role='measure' type='quantitative' />
@@ -928,6 +931,7 @@
       <column caption='Shallow Max Sideload' datatype='real' name='[shallow_max_sideload]' role='measure' type='quantitative' />
       <column caption='Tbguid' datatype='string' name='[tbguid]' role='dimension' type='nominal' />
       <column caption='Wellbore Category' datatype='string' name='[wellbore_category]' role='dimension' type='nominal' />
+      <column-instance column='[FAILURETYPE]' derivation='None' name='[none:FAILURETYPE:nk]' pivot='key' type='nominal' />
       <column-instance column='[max_unguided_sideload]' derivation='None' name='[none:max_unguided_sideload:qk]' pivot='key' type='quantitative' />
       <column-instance column='[overall_max_sideload]' derivation='None' name='[none:overall_max_sideload:qk]' pivot='key' type='quantitative' />
       <column-instance column='[rod_has_guides]' derivation='None' name='[none:rod_has_guides:nk]' pivot='key' type='nominal' />
@@ -940,6 +944,24 @@
         </groupfilter>
       </group>
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:FAILURETYPE:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Tubing&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Sucker Rod Pump&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Rods&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
@@ -1060,6 +1082,109 @@
       </table>
       <simple-id uuid='{26706104-F890-4819-B5C0-DCEE0A61CE38}' />
     </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rodpump_dates' name='federated.0sox2n80is1ljp13zlba402k0a6u' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0sox2n80is1ljp13zlba402k0a6u'>
+            <column caption='Failuretype' datatype='string' name='[FAILURETYPE]' role='dimension' type='nominal' />
+            <column aggregation='None' caption='Max Unguided Dls (bin)' datatype='integer' name='[Max Unguided Dls (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[max_unguided_dls]' peg='0' size='1' />
+            </column>
+            <column-instance column='[max_unguided_sideload]' derivation='Count' name='[cnt:max_unguided_sideload:qk]' pivot='key' type='quantitative' />
+            <column caption='Max Unguided Dls' datatype='real' name='[max_unguided_dls]' role='measure' type='quantitative' />
+            <column caption='Max Unguided Sideload' datatype='real' name='[max_unguided_sideload]' role='measure' type='quantitative' />
+            <column-instance column='[FAILURETYPE]' derivation='None' name='[none:FAILURETYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Max Unguided Dls (bin)]' derivation='None' name='[none:Max Unguided Dls (bin):ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0sox2n80is1ljp13zlba402k0a6u].[none:FAILURETYPE:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:FAILURETYPE:nk]' />
+              <groupfilter function='member' level='[none:FAILURETYPE:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0sox2n80is1ljp13zlba402k0a6u].[none:Max Unguided Dls (bin):ok]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Max Unguided Dls (bin):ok]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='14' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='15' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='16' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='17' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='18' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='19' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='20' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='21' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='22' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='23' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='24' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='25' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='26' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='27' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='28' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='29' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='30' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='31' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='32' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='33' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='34' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='35' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='36' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='37' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='38' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='39' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='40' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='41' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='42' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='43' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='44' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='45' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='46' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='47' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='48' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='49' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='50' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='51' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='52' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='53' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='54' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='55' />
+                <groupfilter function='member' level='[none:Max Unguided Dls (bin):ok]' member='92' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0sox2n80is1ljp13zlba402k0a6u].[none:Max Unguided Dls (bin):ok]</column>
+            <column>[federated.0sox2n80is1ljp13zlba402k0a6u].[none:FAILURETYPE:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0sox2n80is1ljp13zlba402k0a6u].[none:Max Unguided Dls (bin):ok]' value='42' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0sox2n80is1ljp13zlba402k0a6u].[none:FAILURETYPE:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0sox2n80is1ljp13zlba402k0a6u].[cnt:max_unguided_sideload:qk]</rows>
+        <cols>[federated.0sox2n80is1ljp13zlba402k0a6u].[none:Max Unguided Dls (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.0sox2n80is1ljp13zlba402k0a6u].[Max Unguided Dls (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{C0775E59-4767-478B-9891-8009666D2E7C}' />
+    </worksheet>
     <worksheet name='Sideload and Inclination'>
       <table>
         <view>
@@ -1153,7 +1278,7 @@
       </viewpoint>
       <simple-id uuid='{2A4EBBED-DAC9-4536-BE85-77F95252BF4A}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sideload and Inclination'>
+    <window class='worksheet' name='Sideload and Inclination'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1191,6 +1316,42 @@
         </highlight>
       </viewpoint>
       <simple-id uuid='{A5494C27-5958-48FF-8410-F1B068CBF798}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0sox2n80is1ljp13zlba402k0a6u].[none:FAILURETYPE:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0sox2n80is1ljp13zlba402k0a6u].[none:FAILURETYPE:nk]</field>
+            <field>[federated.0sox2n80is1ljp13zlba402k0a6u].[none:Max Unguided Dls (bin):ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{FF4FB9F4-DEF0-4E6D-9569-B9B915A1844B}' />
     </window>
   </windows>
   <thumbnails>
@@ -1729,6 +1890,167 @@
       4cOH43KdmoyYphl1ELVBwfEg7321nv5d29Cjfc3UBL4QIpHIBamV1iT11TbDcBz56X9X9YX6
       +sxA2FZdLlXb6uzbMWDAABYsWEB6enqdf0lTEvz8YGTXaqmBCgQCwaXK/wOFok+LXaUrDQAA
       AABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='384' name='Sheet 3' width='384'>
+      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
     </thumbnail>
     <thumbnail height='384' name='Sideload and Inclination' width='384'>
       iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
