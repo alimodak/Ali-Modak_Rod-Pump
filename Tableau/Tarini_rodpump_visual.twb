@@ -1058,6 +1058,11 @@
             <run>Failure Type Percentage for each BHA Configuration Category</run>
           </formatted-text>
         </title>
+        <caption>
+          <formatted-text>
+            <run>We utilized a bar chart that displays the percent of rod pump failure type and the bottom hole assembly configuration (BHA) type. To elaborate, we explored the effect that BHA configuration may have on failure type. For example, the NOSEP_PACKER BHA configuration has a larger percentage of tubing failure than sucker rod pump and rod failure. In the future, we plan to predict the failure type using BHA configuration type and will use this bar chart to check our predictions. </run>
+          </formatted-text>
+        </caption>
       </layout-options>
       <table>
         <view>
@@ -1672,6 +1677,11 @@
         <edge name='right'>
           <strip size='160'>
             <card pane-specification-id='0' param='[federated.0d5khqt0dp7b5v15nd5nd0f1654g].[none:FAILURETYPE:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='201'>
+            <card type='caption' />
           </strip>
         </edge>
       </cards>
