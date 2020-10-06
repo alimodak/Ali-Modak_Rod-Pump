@@ -1,0 +1,1655 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20202.20.0818.0857                               -->
+<workbook original-version='18.1' source-build='2020.2.5 (20202.20.0818.0857)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Lifetime End Parameter' datatype='date' default-format='*yyyy' name='[Lifetime End Parameter]' param-domain-type='list' role='measure' type='quantitative' value='#2020-01-01#'>
+        <calculation class='tableau' formula='#2020-01-01#' />
+        <members>
+          <member value='#2005-11-28#' />
+          <member value='#2006-02-12#' />
+          <member value='#2007-01-02#' />
+          <member value='#2008-01-04#' />
+          <member value='#2009-01-06#' />
+          <member value='#2010-01-11#' />
+          <member value='#2011-01-13#' />
+          <member value='#2012-01-16#' />
+          <member value='#2013-01-04#' />
+          <member value='#2014-01-13#' />
+          <member value='#2015-01-09#' />
+          <member value='#2016-01-03#' />
+          <member value='#2017-01-06#' />
+          <member value='#2018-01-01#' />
+          <member value='#2019-01-02#' />
+          <member value='#2020-01-01#' />
+        </members>
+      </column>
+      <column caption='Lifetime Start Parameter' datatype='date' default-format='*yyyy' name='[Lifetime Start Parameter]' param-domain-type='list' role='measure' type='quantitative' value='#2004-08-25#'>
+        <calculation class='tableau' formula='#2004-08-25#' />
+        <members>
+          <member value='#2004-08-25#' />
+          <member value='#2005-01-13#' />
+          <member value='#2006-02-07#' />
+          <member value='#2007-01-10#' />
+          <member value='#2008-01-07#' />
+          <member value='#2009-01-08#' />
+          <member value='#2010-01-08#' />
+          <member value='#2011-01-06#' />
+          <member value='#2012-01-09#' />
+          <member value='#2013-01-04#' />
+          <member value='#2014-01-08#' />
+          <member value='#2015-01-05#' />
+          <member value='#2016-01-02#' />
+          <member value='#2017-01-05#' />
+          <member value='#2018-01-03#' />
+          <member value='#2019-01-02#' />
+          <member value='#2020-01-01#' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='rodpump_raw' inline='true' name='federated.0bsqwii1dctyqg1fi1vli17looyo' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='rodpump_raw' name='textscan.026hw2t0cbvvte1g3vcyv18luzf8'>
+            <connection class='textscan' directory='/Users/masonma/Desktop/UT/nsc325/rodpump' filename='rodpump_raw.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.026hw2t0cbvvte1g3vcyv18luzf8' name='rodpump_raw.csv' table='[rodpump_raw#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='roduid' ordinal='0' />
+            <column datatype='string' name='UWI' ordinal='1' />
+            <column datatype='string' name='NODEID' ordinal='2' />
+            <column datatype='string' name='IDWELL' ordinal='3' />
+            <column datatype='string' name='tbguid' ordinal='4' />
+            <column datatype='date' name='lifetime_start' ordinal='5' />
+            <column datatype='date' name='lifetime_end' ordinal='6' />
+            <column datatype='string' name='IDRECJOBPULL' ordinal='7' />
+            <column datatype='string' name='REPORTTO' ordinal='8' />
+            <column datatype='date' name='FAILSTART' ordinal='9' />
+            <column datatype='string' name='FAILURETYPE' ordinal='10' />
+            <column datatype='real' name='H2S_CONCENTRATION' ordinal='11' />
+            <column datatype='real' name='PrimarySetpoint' ordinal='12' />
+            <column datatype='integer' name='SecondarySetpoint' ordinal='13' />
+            <column datatype='real' name='StrokeLength' ordinal='14' />
+            <column datatype='real' name='GrossStrokeLength' ordinal='15' />
+            <column datatype='real' name='Fillage' ordinal='16' />
+            <column datatype='real' name='YesterdaysAverageSPM' ordinal='17' />
+            <column datatype='string' name='bha_configuration' ordinal='18' />
+            <column datatype='integer' name='chemgroup1_any' ordinal='19' />
+            <column datatype='integer' name='chemgroup1_all' ordinal='20' />
+            <column datatype='integer' name='chemgroup2_any' ordinal='21' />
+            <column datatype='integer' name='chemgroup2_all' ordinal='22' />
+            <column datatype='integer' name='chemgroup3_any' ordinal='23' />
+            <column datatype='integer' name='chemgroup3_all' ordinal='24' />
+            <column datatype='real' name='max_unguided_dls' ordinal='25' />
+            <column datatype='real' name='dls_high_in_hole' ordinal='26' />
+            <column datatype='real' name='gas_anchor_length' ordinal='27' />
+            <column datatype='real' name='MAX_INCLINATION' ordinal='28' />
+            <column datatype='string' name='wellbore_category' ordinal='29' />
+            <column datatype='string' name='manual_scale' ordinal='30' />
+            <column datatype='string' name='packer_vs_tac' ordinal='31' />
+            <column datatype='real' name='AVG_PRESS_FLOWLINE' ordinal='32' />
+            <column datatype='real' name='AVG_PRESSURE_TUBING' ordinal='33' />
+            <column datatype='real' name='AVG_PRESSURE_CASING' ordinal='34' />
+            <column datatype='real' name='AVG_DIFFERENTIAL_PRESSURE' ordinal='35' />
+            <column datatype='real' name='AVG_OIL_VOLUME' ordinal='36' />
+            <column datatype='real' name='AVG_WATER_VOLUME' ordinal='37' />
+            <column datatype='real' name='AVG_LIQUID_VOLUME' ordinal='38' />
+            <column datatype='real' name='AVG_WATERSG' ordinal='39' />
+            <column datatype='string' name='rod_sinker_type' ordinal='40' />
+            <column datatype='boolean' name='rod_has_guides' ordinal='41' />
+            <column datatype='string' name='rod_make' ordinal='42' />
+            <column datatype='string' name='rod_apigrade' ordinal='43' />
+            <column datatype='integer' name='ROUTE' ordinal='44' />
+            <column datatype='real' name='overall_max_sideload' ordinal='45' />
+            <column datatype='real' name='shallow_max_sideload' ordinal='46' />
+            <column datatype='real' name='max_unguided_sideload' ordinal='47' />
+            <column datatype='string' name='DESANDDEGAS_TYP' ordinal='48' />
+            <column datatype='real' name='CHROME_LENGTH' ordinal='49' />
+            <column datatype='real' name='ENDURALLOY_LENGTH' ordinal='50' />
+            <column datatype='real' name='POLY_LENGTH' ordinal='51' />
+            <column datatype='real' name='NIPPLE_SET_DEPTH' ordinal='52' />
+            <column datatype='real' name='pump_bore' ordinal='53' />
+            <column datatype='string' name='gasanchor_od' ordinal='54' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.026hw2t0cbvvte1g3vcyv18luzf8' name='rodpump_raw.csv' table='[rodpump_raw#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='roduid' ordinal='0' />
+            <column datatype='string' name='UWI' ordinal='1' />
+            <column datatype='string' name='NODEID' ordinal='2' />
+            <column datatype='string' name='IDWELL' ordinal='3' />
+            <column datatype='string' name='tbguid' ordinal='4' />
+            <column datatype='date' name='lifetime_start' ordinal='5' />
+            <column datatype='date' name='lifetime_end' ordinal='6' />
+            <column datatype='string' name='IDRECJOBPULL' ordinal='7' />
+            <column datatype='string' name='REPORTTO' ordinal='8' />
+            <column datatype='date' name='FAILSTART' ordinal='9' />
+            <column datatype='string' name='FAILURETYPE' ordinal='10' />
+            <column datatype='real' name='H2S_CONCENTRATION' ordinal='11' />
+            <column datatype='real' name='PrimarySetpoint' ordinal='12' />
+            <column datatype='integer' name='SecondarySetpoint' ordinal='13' />
+            <column datatype='real' name='StrokeLength' ordinal='14' />
+            <column datatype='real' name='GrossStrokeLength' ordinal='15' />
+            <column datatype='real' name='Fillage' ordinal='16' />
+            <column datatype='real' name='YesterdaysAverageSPM' ordinal='17' />
+            <column datatype='string' name='bha_configuration' ordinal='18' />
+            <column datatype='integer' name='chemgroup1_any' ordinal='19' />
+            <column datatype='integer' name='chemgroup1_all' ordinal='20' />
+            <column datatype='integer' name='chemgroup2_any' ordinal='21' />
+            <column datatype='integer' name='chemgroup2_all' ordinal='22' />
+            <column datatype='integer' name='chemgroup3_any' ordinal='23' />
+            <column datatype='integer' name='chemgroup3_all' ordinal='24' />
+            <column datatype='real' name='max_unguided_dls' ordinal='25' />
+            <column datatype='real' name='dls_high_in_hole' ordinal='26' />
+            <column datatype='real' name='gas_anchor_length' ordinal='27' />
+            <column datatype='real' name='MAX_INCLINATION' ordinal='28' />
+            <column datatype='string' name='wellbore_category' ordinal='29' />
+            <column datatype='string' name='manual_scale' ordinal='30' />
+            <column datatype='string' name='packer_vs_tac' ordinal='31' />
+            <column datatype='real' name='AVG_PRESS_FLOWLINE' ordinal='32' />
+            <column datatype='real' name='AVG_PRESSURE_TUBING' ordinal='33' />
+            <column datatype='real' name='AVG_PRESSURE_CASING' ordinal='34' />
+            <column datatype='real' name='AVG_DIFFERENTIAL_PRESSURE' ordinal='35' />
+            <column datatype='real' name='AVG_OIL_VOLUME' ordinal='36' />
+            <column datatype='real' name='AVG_WATER_VOLUME' ordinal='37' />
+            <column datatype='real' name='AVG_LIQUID_VOLUME' ordinal='38' />
+            <column datatype='real' name='AVG_WATERSG' ordinal='39' />
+            <column datatype='string' name='rod_sinker_type' ordinal='40' />
+            <column datatype='boolean' name='rod_has_guides' ordinal='41' />
+            <column datatype='string' name='rod_make' ordinal='42' />
+            <column datatype='string' name='rod_apigrade' ordinal='43' />
+            <column datatype='integer' name='ROUTE' ordinal='44' />
+            <column datatype='real' name='overall_max_sideload' ordinal='45' />
+            <column datatype='real' name='shallow_max_sideload' ordinal='46' />
+            <column datatype='real' name='max_unguided_sideload' ordinal='47' />
+            <column datatype='string' name='DESANDDEGAS_TYP' ordinal='48' />
+            <column datatype='real' name='CHROME_LENGTH' ordinal='49' />
+            <column datatype='real' name='ENDURALLOY_LENGTH' ordinal='50' />
+            <column datatype='real' name='POLY_LENGTH' ordinal='51' />
+            <column datatype='real' name='NIPPLE_SET_DEPTH' ordinal='52' />
+            <column datatype='real' name='pump_bore' ordinal='53' />
+            <column datatype='string' name='gasanchor_od' ordinal='54' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>roduid</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[roduid]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>roduid</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UWI</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[UWI]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>UWI</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NODEID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NODEID]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>NODEID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IDWELL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[IDWELL]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>IDWELL</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tbguid</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tbguid]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>tbguid</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lifetime_start</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[lifetime_start]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>lifetime_start</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lifetime_end</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[lifetime_end]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>lifetime_end</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IDRECJOBPULL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[IDRECJOBPULL]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>IDRECJOBPULL</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REPORTTO</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[REPORTTO]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>REPORTTO</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FAILSTART</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[FAILSTART]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>FAILSTART</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FAILURETYPE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FAILURETYPE]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>FAILURETYPE</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>H2S_CONCENTRATION</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[H2S_CONCENTRATION]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>H2S_CONCENTRATION</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PrimarySetpoint</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PrimarySetpoint]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>PrimarySetpoint</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SecondarySetpoint</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SecondarySetpoint]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>SecondarySetpoint</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StrokeLength</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[StrokeLength]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>StrokeLength</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GrossStrokeLength</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[GrossStrokeLength]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>GrossStrokeLength</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fillage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Fillage]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>Fillage</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YesterdaysAverageSPM</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[YesterdaysAverageSPM]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>YesterdaysAverageSPM</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bha_configuration</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bha_configuration]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>bha_configuration</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chemgroup1_any</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[chemgroup1_any]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>chemgroup1_any</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chemgroup1_all</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[chemgroup1_all]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>chemgroup1_all</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chemgroup2_any</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[chemgroup2_any]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>chemgroup2_any</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chemgroup2_all</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[chemgroup2_all]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>chemgroup2_all</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chemgroup3_any</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[chemgroup3_any]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>chemgroup3_any</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>chemgroup3_all</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[chemgroup3_all]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>chemgroup3_all</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_unguided_dls</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[max_unguided_dls]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>max_unguided_dls</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dls_high_in_hole</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[dls_high_in_hole]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>dls_high_in_hole</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gas_anchor_length</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gas_anchor_length]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>gas_anchor_length</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MAX_INCLINATION</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MAX_INCLINATION]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>MAX_INCLINATION</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wellbore_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[wellbore_category]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>wellbore_category</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>manual_scale</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[manual_scale]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>manual_scale</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>packer_vs_tac</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[packer_vs_tac]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>packer_vs_tac</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVG_PRESS_FLOWLINE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AVG_PRESS_FLOWLINE]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>AVG_PRESS_FLOWLINE</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVG_PRESSURE_TUBING</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AVG_PRESSURE_TUBING]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>AVG_PRESSURE_TUBING</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVG_PRESSURE_CASING</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AVG_PRESSURE_CASING]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>AVG_PRESSURE_CASING</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVG_DIFFERENTIAL_PRESSURE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AVG_DIFFERENTIAL_PRESSURE]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>AVG_DIFFERENTIAL_PRESSURE</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVG_OIL_VOLUME</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AVG_OIL_VOLUME]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>AVG_OIL_VOLUME</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVG_WATER_VOLUME</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AVG_WATER_VOLUME]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>AVG_WATER_VOLUME</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVG_LIQUID_VOLUME</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AVG_LIQUID_VOLUME]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>AVG_LIQUID_VOLUME</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AVG_WATERSG</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AVG_WATERSG]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>AVG_WATERSG</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rod_sinker_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rod_sinker_type]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>rod_sinker_type</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rod_has_guides</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[rod_has_guides]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>rod_has_guides</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rod_make</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rod_make]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>rod_make</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rod_apigrade</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rod_apigrade]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>rod_apigrade</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ROUTE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ROUTE]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>ROUTE</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>overall_max_sideload</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[overall_max_sideload]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>overall_max_sideload</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shallow_max_sideload</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[shallow_max_sideload]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>shallow_max_sideload</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_unguided_sideload</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[max_unguided_sideload]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>max_unguided_sideload</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DESANDDEGAS_TYP</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DESANDDEGAS_TYP]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>DESANDDEGAS_TYP</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CHROME_LENGTH</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CHROME_LENGTH]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>CHROME_LENGTH</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ENDURALLOY_LENGTH</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ENDURALLOY_LENGTH]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>ENDURALLOY_LENGTH</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POLY_LENGTH</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[POLY_LENGTH]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>POLY_LENGTH</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NIPPLE_SET_DEPTH</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[NIPPLE_SET_DEPTH]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>NIPPLE_SET_DEPTH</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pump_bore</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pump_bore]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>pump_bore</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gasanchor_od</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gasanchor_od]</local-name>
+            <parent-name>[rodpump_raw.csv]</parent-name>
+            <remote-alias>gasanchor_od</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Differential Pressure' datatype='real' name='[AVG_DIFFERENTIAL_PRESSURE]' role='measure' type='quantitative' />
+      <column caption='Avg Liquid Volume' datatype='real' name='[AVG_LIQUID_VOLUME]' role='measure' type='quantitative' />
+      <column caption='Avg Oil Volume' datatype='real' name='[AVG_OIL_VOLUME]' role='measure' type='quantitative' />
+      <column caption='Avg Pressure Casing' datatype='real' name='[AVG_PRESSURE_CASING]' role='measure' type='quantitative' />
+      <column caption='Avg Pressure Tubing' datatype='real' name='[AVG_PRESSURE_TUBING]' role='measure' type='quantitative' />
+      <column caption='Avg Press Flowline' datatype='real' name='[AVG_PRESS_FLOWLINE]' role='measure' type='quantitative' />
+      <column caption='Avg Watersg' datatype='real' name='[AVG_WATERSG]' role='measure' type='quantitative' />
+      <column caption='Avg Water Volume' datatype='real' name='[AVG_WATER_VOLUME]' role='measure' type='quantitative' />
+      <column caption='Chrome Length' datatype='real' name='[CHROME_LENGTH]' role='measure' type='quantitative' />
+      <column caption='Active During Years' datatype='boolean' name='[Calculation_662592128628039681]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='([lifetime_end] &lt;= [Parameters].[Lifetime End Parameter]) and ([lifetime_start] &gt;= [Parameters].[Lifetime Start Parameter])' />
+      </column>
+      <column caption='Lifetime' datatype='integer' name='[Calculation_662592128629989378]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[lifetime_end]-[lifetime_start]' />
+      </column>
+      <column caption='Desanddegas Typ' datatype='string' name='[DESANDDEGAS_TYP]' role='dimension' type='nominal' />
+      <column caption='Enduralloy Length' datatype='real' name='[ENDURALLOY_LENGTH]' role='measure' type='quantitative' />
+      <column caption='Failstart' datatype='date' name='[FAILSTART]' role='dimension' type='ordinal' />
+      <column caption='Failuretype' datatype='string' name='[FAILURETYPE]' role='dimension' type='nominal' />
+      <column caption='Gross Stroke Length' datatype='real' name='[GrossStrokeLength]' role='measure' type='quantitative' />
+      <column caption='H2S Concentration' datatype='real' name='[H2S_CONCENTRATION]' role='measure' type='quantitative' />
+      <column caption='Idrecjobpull' datatype='string' name='[IDRECJOBPULL]' role='dimension' type='nominal' />
+      <column caption='Idwell' datatype='string' name='[IDWELL]' role='dimension' type='nominal' />
+      <column caption='Lifetime (bin)' datatype='integer' name='[Lifetime (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='2' formula='[Calculation_662592128629989378]' peg='0' size='180' />
+      </column>
+      <column caption='Max Inclination' datatype='real' name='[MAX_INCLINATION]' role='measure' type='quantitative' />
+      <column caption='Nipple Set Depth' datatype='real' name='[NIPPLE_SET_DEPTH]' role='measure' type='quantitative' />
+      <column caption='Nodeid' datatype='string' name='[NODEID]' role='dimension' type='nominal' />
+      <column caption='Poly Length' datatype='real' name='[POLY_LENGTH]' role='measure' type='quantitative' />
+      <column caption='Primary Setpoint' datatype='real' name='[PrimarySetpoint]' role='measure' type='quantitative' />
+      <column caption='Reportto' datatype='string' name='[REPORTTO]' role='dimension' type='nominal' />
+      <column caption='Route' datatype='integer' name='[ROUTE]' role='measure' type='quantitative' />
+      <column caption='Secondary Setpoint' datatype='integer' name='[SecondarySetpoint]' role='measure' type='quantitative' />
+      <column caption='Stroke Length' datatype='real' name='[StrokeLength]' role='measure' type='quantitative' />
+      <column caption='Yesterdays Average SPM' datatype='real' name='[YesterdaysAverageSPM]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='rodpump_raw.csv' datatype='table' name='[__tableau_internal_object_id__].[rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB]' role='measure' type='quantitative' />
+      <column caption='Bha Configuration' datatype='string' name='[bha_configuration]' role='dimension' type='nominal' />
+      <column caption='Chemgroup1 All' datatype='integer' name='[chemgroup1_all]' role='measure' type='quantitative' />
+      <column caption='Chemgroup1 Any' datatype='integer' name='[chemgroup1_any]' role='measure' type='quantitative' />
+      <column caption='Chemgroup2 All' datatype='integer' name='[chemgroup2_all]' role='measure' type='quantitative' />
+      <column caption='Chemgroup2 Any' datatype='integer' name='[chemgroup2_any]' role='measure' type='quantitative' />
+      <column caption='Chemgroup3 All' datatype='integer' name='[chemgroup3_all]' role='measure' type='quantitative' />
+      <column caption='Chemgroup3 Any' datatype='integer' name='[chemgroup3_any]' role='measure' type='quantitative' />
+      <column caption='Dls High In Hole' datatype='real' name='[dls_high_in_hole]' role='measure' type='quantitative' />
+      <column caption='Gas Anchor Length' datatype='real' name='[gas_anchor_length]' role='measure' type='quantitative' />
+      <column caption='Gasanchor Od' datatype='string' name='[gasanchor_od]' role='dimension' type='nominal' />
+      <column caption='Lifetime End' datatype='date' name='[lifetime_end]' role='dimension' type='ordinal' />
+      <column caption='Lifetime Start' datatype='date' name='[lifetime_start]' role='dimension' type='ordinal' />
+      <column caption='Manual Scale' datatype='string' name='[manual_scale]' role='dimension' type='nominal' />
+      <column caption='Max Unguided Dls' datatype='real' name='[max_unguided_dls]' role='measure' type='quantitative' />
+      <column caption='Max Unguided Sideload' datatype='real' name='[max_unguided_sideload]' role='measure' type='quantitative' />
+      <column caption='Overall Max Sideload' datatype='real' name='[overall_max_sideload]' role='measure' type='quantitative' />
+      <column caption='Packer Vs Tac' datatype='string' name='[packer_vs_tac]' role='dimension' type='nominal' />
+      <column caption='Pump Bore' datatype='real' name='[pump_bore]' role='measure' type='quantitative' />
+      <column caption='Rod Apigrade' datatype='string' name='[rod_apigrade]' role='dimension' type='nominal' />
+      <column caption='Rod Has Guides' datatype='boolean' name='[rod_has_guides]' role='dimension' type='nominal' />
+      <column caption='Rod Make' datatype='string' name='[rod_make]' role='dimension' type='nominal' />
+      <column caption='Rod Sinker Type' datatype='string' name='[rod_sinker_type]' role='dimension' type='nominal' />
+      <column caption='Roduid' datatype='string' name='[roduid]' role='dimension' type='nominal' />
+      <column caption='Shallow Max Sideload' datatype='real' name='[shallow_max_sideload]' role='measure' type='quantitative' />
+      <column caption='Tbguid' datatype='string' name='[tbguid]' role='dimension' type='nominal' />
+      <column caption='Wellbore Category' datatype='string' name='[wellbore_category]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Lifetime End Parameter' datatype='date' default-format='*yyyy' name='[Lifetime End Parameter]' param-domain-type='list' role='measure' type='quantitative' value='#2020-01-01#'>
+          <calculation class='tableau' formula='#2020-01-01#' />
+        </column>
+        <column caption='Lifetime Start Parameter' datatype='date' default-format='*yyyy' name='[Lifetime Start Parameter]' param-domain-type='list' role='measure' type='quantitative' value='#2004-08-25#'>
+          <calculation class='tableau' formula='#2004-08-25#' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='rodpump_raw.csv' id='rodpump_raw.csv_FB6988146D334664BA6EB7BD5AEA93EB'>
+            <properties context=''>
+              <relation connection='textscan.026hw2t0cbvvte1g3vcyv18luzf8' name='rodpump_raw.csv' table='[rodpump_raw#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='roduid' ordinal='0' />
+                  <column datatype='string' name='UWI' ordinal='1' />
+                  <column datatype='string' name='NODEID' ordinal='2' />
+                  <column datatype='string' name='IDWELL' ordinal='3' />
+                  <column datatype='string' name='tbguid' ordinal='4' />
+                  <column datatype='date' name='lifetime_start' ordinal='5' />
+                  <column datatype='date' name='lifetime_end' ordinal='6' />
+                  <column datatype='string' name='IDRECJOBPULL' ordinal='7' />
+                  <column datatype='string' name='REPORTTO' ordinal='8' />
+                  <column datatype='date' name='FAILSTART' ordinal='9' />
+                  <column datatype='string' name='FAILURETYPE' ordinal='10' />
+                  <column datatype='real' name='H2S_CONCENTRATION' ordinal='11' />
+                  <column datatype='real' name='PrimarySetpoint' ordinal='12' />
+                  <column datatype='integer' name='SecondarySetpoint' ordinal='13' />
+                  <column datatype='real' name='StrokeLength' ordinal='14' />
+                  <column datatype='real' name='GrossStrokeLength' ordinal='15' />
+                  <column datatype='real' name='Fillage' ordinal='16' />
+                  <column datatype='real' name='YesterdaysAverageSPM' ordinal='17' />
+                  <column datatype='string' name='bha_configuration' ordinal='18' />
+                  <column datatype='integer' name='chemgroup1_any' ordinal='19' />
+                  <column datatype='integer' name='chemgroup1_all' ordinal='20' />
+                  <column datatype='integer' name='chemgroup2_any' ordinal='21' />
+                  <column datatype='integer' name='chemgroup2_all' ordinal='22' />
+                  <column datatype='integer' name='chemgroup3_any' ordinal='23' />
+                  <column datatype='integer' name='chemgroup3_all' ordinal='24' />
+                  <column datatype='real' name='max_unguided_dls' ordinal='25' />
+                  <column datatype='real' name='dls_high_in_hole' ordinal='26' />
+                  <column datatype='real' name='gas_anchor_length' ordinal='27' />
+                  <column datatype='real' name='MAX_INCLINATION' ordinal='28' />
+                  <column datatype='string' name='wellbore_category' ordinal='29' />
+                  <column datatype='string' name='manual_scale' ordinal='30' />
+                  <column datatype='string' name='packer_vs_tac' ordinal='31' />
+                  <column datatype='real' name='AVG_PRESS_FLOWLINE' ordinal='32' />
+                  <column datatype='real' name='AVG_PRESSURE_TUBING' ordinal='33' />
+                  <column datatype='real' name='AVG_PRESSURE_CASING' ordinal='34' />
+                  <column datatype='real' name='AVG_DIFFERENTIAL_PRESSURE' ordinal='35' />
+                  <column datatype='real' name='AVG_OIL_VOLUME' ordinal='36' />
+                  <column datatype='real' name='AVG_WATER_VOLUME' ordinal='37' />
+                  <column datatype='real' name='AVG_LIQUID_VOLUME' ordinal='38' />
+                  <column datatype='real' name='AVG_WATERSG' ordinal='39' />
+                  <column datatype='string' name='rod_sinker_type' ordinal='40' />
+                  <column datatype='boolean' name='rod_has_guides' ordinal='41' />
+                  <column datatype='string' name='rod_make' ordinal='42' />
+                  <column datatype='string' name='rod_apigrade' ordinal='43' />
+                  <column datatype='integer' name='ROUTE' ordinal='44' />
+                  <column datatype='real' name='overall_max_sideload' ordinal='45' />
+                  <column datatype='real' name='shallow_max_sideload' ordinal='46' />
+                  <column datatype='real' name='max_unguided_sideload' ordinal='47' />
+                  <column datatype='string' name='DESANDDEGAS_TYP' ordinal='48' />
+                  <column datatype='real' name='CHROME_LENGTH' ordinal='49' />
+                  <column datatype='real' name='ENDURALLOY_LENGTH' ordinal='50' />
+                  <column datatype='real' name='POLY_LENGTH' ordinal='51' />
+                  <column datatype='real' name='NIPPLE_SET_DEPTH' ordinal='52' />
+                  <column datatype='real' name='pump_bore' ordinal='53' />
+                  <column datatype='string' name='gasanchor_od' ordinal='54' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Failures Agg by Month'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rodpump_raw' name='federated.0bsqwii1dctyqg1fi1vli17looyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bsqwii1dctyqg1fi1vli17looyo'>
+            <column caption='Failuretype' datatype='string' name='[FAILURETYPE]' role='dimension' type='nominal' />
+            <column-instance column='[FAILURETYPE]' derivation='Count' name='[cnt:FAILURETYPE:qk]' pivot='key' type='quantitative' />
+            <column caption='Lifetime End' datatype='date' name='[lifetime_end]' role='dimension' type='ordinal' />
+            <column-instance column='[lifetime_end]' derivation='Month' name='[mn:lifetime_end:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[FAILURETYPE]' derivation='None' name='[none:FAILURETYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[lifetime_end]' derivation='Year' name='[yr:lifetime_end:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:FAILURETYPE:nk]' />
+              <groupfilter function='member' level='[none:FAILURETYPE:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]'>
+            <groupfilter from='2012' function='range' level='[yr:lifetime_end:ok]' to='2020' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]</column>
+            <column>[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0bsqwii1dctyqg1fi1vli17looyo].[mn:lifetime_end:ok]' value='156' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0bsqwii1dctyqg1fi1vli17looyo].[cnt:FAILURETYPE:qk]</rows>
+        <cols>[federated.0bsqwii1dctyqg1fi1vli17looyo].[mn:lifetime_end:ok]</cols>
+      </table>
+      <simple-id uuid='{2D678911-5A8A-4EDE-9BA3-D9B2F47E872C}' />
+    </worksheet>
+    <worksheet name='Failures by Year'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rodpump_raw' name='federated.0bsqwii1dctyqg1fi1vli17looyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bsqwii1dctyqg1fi1vli17looyo'>
+            <column caption='Failuretype' datatype='string' name='[FAILURETYPE]' role='dimension' type='nominal' />
+            <column-instance column='[FAILURETYPE]' derivation='Count' name='[cnt:FAILURETYPE:qk]' pivot='key' type='quantitative' />
+            <column caption='Lifetime End' datatype='date' name='[lifetime_end]' role='dimension' type='ordinal' />
+            <column-instance column='[FAILURETYPE]' derivation='None' name='[none:FAILURETYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[lifetime_end]' derivation='Quarter' name='[qr:lifetime_end:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[lifetime_end]' derivation='Year-Trunc' name='[tyr:lifetime_end:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[lifetime_end]' derivation='Year' name='[yr:lifetime_end:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:FAILURETYPE:nk]' />
+              <groupfilter function='member' level='[none:FAILURETYPE:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]'>
+            <groupfilter function='level-members' level='[yr:lifetime_end:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]</column>
+            <column>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]' value='247' />
+            <format attr='width' field='[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]' value='114' />
+            <format attr='width' field='[federated.0bsqwii1dctyqg1fi1vli17looyo].[qr:lifetime_end:ok]' value='114' />
+            <format attr='width' field='[federated.0bsqwii1dctyqg1fi1vli17looyo].[tyr:lifetime_end:qk]' value='114' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0bsqwii1dctyqg1fi1vli17looyo].[cnt:FAILURETYPE:qk]</rows>
+        <cols>[federated.0bsqwii1dctyqg1fi1vli17looyo].[tyr:lifetime_end:qk]</cols>
+      </table>
+      <simple-id uuid='{49E31E49-3636-410C-B9F8-61B43D763531}' />
+    </worksheet>
+    <worksheet name='Lifetime'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rodpump_raw' name='federated.0bsqwii1dctyqg1fi1vli17looyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bsqwii1dctyqg1fi1vli17looyo'>
+            <column caption='Lifetime' datatype='integer' name='[Calculation_662592128629989378]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[lifetime_end]-[lifetime_start]' />
+            </column>
+            <column caption='Failuretype' datatype='string' name='[FAILURETYPE]' role='dimension' type='nominal' />
+            <column caption='Lifetime (bin)' datatype='integer' name='[Lifetime (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='2' formula='[Calculation_662592128629989378]' peg='0' size='180' />
+            </column>
+            <column-instance column='[Calculation_662592128629989378]' derivation='Count' name='[cnt:Calculation_662592128629989378:qk]' pivot='key' type='quantitative' />
+            <column caption='Lifetime End' datatype='date' name='[lifetime_end]' role='dimension' type='ordinal' />
+            <column caption='Lifetime Start' datatype='date' name='[lifetime_start]' role='dimension' type='ordinal' />
+            <column-instance column='[FAILURETYPE]' derivation='None' name='[none:FAILURETYPE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Lifetime (bin)]' derivation='None' name='[none:Lifetime (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[lifetime_end]' derivation='Year' name='[yr:lifetime_end:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:FAILURETYPE:nk]' />
+              <groupfilter function='member' level='[none:FAILURETYPE:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]'>
+            <groupfilter from='2012' function='range' level='[yr:lifetime_end:ok]' to='2020' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]</column>
+            <column>[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0bsqwii1dctyqg1fi1vli17looyo].[cnt:Calculation_662592128629989378:qk]</rows>
+        <cols>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:Lifetime (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.0bsqwii1dctyqg1fi1vli17looyo].[Lifetime (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{972F77CF-C683-421B-9897-6D7E82561619}' />
+    </worksheet>
+    <worksheet name='Rods with Guides by Year'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rodpump_raw' name='federated.0bsqwii1dctyqg1fi1vli17looyo' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bsqwii1dctyqg1fi1vli17looyo'>
+            <column caption='Failuretype' datatype='string' name='[FAILURETYPE]' role='dimension' type='nominal' />
+            <column-instance column='[rod_has_guides]' derivation='Count' name='[cnt:rod_has_guides:qk]' pivot='key' type='quantitative' />
+            <column caption='Lifetime End' datatype='date' name='[lifetime_end]' role='dimension' type='ordinal' />
+            <column-instance column='[FAILURETYPE]' derivation='None' name='[none:FAILURETYPE:nk]' pivot='key' type='nominal' />
+            <column caption='Rod Has Guides' datatype='boolean' name='[rod_has_guides]' role='dimension' type='nominal' />
+            <column-instance column='[lifetime_end]' derivation='Year' name='[yr:lifetime_end:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:FAILURETYPE:nk]' />
+              <groupfilter function='member' level='[none:FAILURETYPE:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]'>
+            <groupfilter from='2012' function='range' level='[yr:lifetime_end:ok]' to='2020' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]</column>
+            <column>[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]' value='116' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0bsqwii1dctyqg1fi1vli17looyo].[cnt:rod_has_guides:qk]</rows>
+        <cols>[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]</cols>
+      </table>
+      <simple-id uuid='{6392CE34-F35D-4F5F-8608-5DB7F85C9392}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Lifetime'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[avg:MAX_INCLINATION:qk]</field>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[avg:overall_max_sideload:qk]</field>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:DESANDDEGAS_TYP:nk]</field>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]</field>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:Lifetime (bin):ok]</field>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:rod_make:nk]</field>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6E6A7543-B16A-4A35-B31D-179C9709C3E2}' />
+    </window>
+    <window class='worksheet' name='Failures by Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]</field>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{780FAA1D-0A2E-471D-9572-2B576259FFA3}' />
+    </window>
+    <window class='worksheet' name='Failures Agg by Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]' type='color' />
+            <card param='[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]</field>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7D419DCF-26C9-4E0E-8E26-CF678D0BC64E}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Rods with Guides by Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:FAILURETYPE:nk]</field>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[none:rod_has_guides:nk]</field>
+            <field>[federated.0bsqwii1dctyqg1fi1vli17looyo].[yr:lifetime_end:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{488AB7FE-B92C-4967-A40B-81359847F5A1}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Failures Agg by Month' width='192'>
+      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
+      Sk1pztjjAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Failures by Year' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Lifetime' width='192'>
+      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
+      M9YRcgAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Rods with Guides by Year' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
