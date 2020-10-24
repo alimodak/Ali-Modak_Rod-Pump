@@ -2,6 +2,8 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.impute import KNNImputer
 from floridaman.metrics import getPercentNull
+import numpy as np
+from numpy import random
 
 def load(source):
     if (source=='null_transformed'):
@@ -73,3 +75,33 @@ def features(df):
         except:
             pass
     return features
+
+
+
+
+
+def fullNormData(df):
+    SRP = pd.DataFrame(raw_data[raw_data['FAILURETYPE'] == 'Sucker Rod Pump'])
+    Rods = pd.DataFrame(raw_data[raw_data['FAILURETYPE'] == 'Rods'])
+    Tubing = pd.DataFrame(raw_data[raw_data['FAILURETYPE'] == 'Tubing'])
+    normalized_data = Rods
+    maxSize = len(Rods.index)
+    
+
+    def normalize(df,maxSize):
+        global normalized_data
+        for i in range(1,maxSize+1):
+            randRowNum = random.randint(0,len(df.index))
+            normalized_data = normalized_data.append(df.iloc[randRowNum,:])
+            df = df.drop(df.index[randRowNum])
+
+            #shuffle rows in df
+            df = df.sample(frac=1).reset_index(drop=True)
+     
+    normalize(SRP, maxSize)
+    normalize(Tubing, maxSize)
+
+    #shuffle rows in new df
+    normalized_data.sample(frac=1).reset_index(drop=True)
+    
+    return normalized_data
