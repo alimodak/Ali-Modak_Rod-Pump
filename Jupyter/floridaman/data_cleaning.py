@@ -81,9 +81,9 @@ def features(df):
 
 
 def fullNormData(df):
-    SRP = pd.DataFrame(raw_data[raw_data['FAILURETYPE'] == 'Sucker Rod Pump'])
-    Rods = pd.DataFrame(raw_data[raw_data['FAILURETYPE'] == 'Rods'])
-    Tubing = pd.DataFrame(raw_data[raw_data['FAILURETYPE'] == 'Tubing'])
+    SRP = pd.DataFrame(df[df['FAILURETYPE'] == 'Sucker Rod Pump'])
+    Rods = pd.DataFrame(df[df['FAILURETYPE'] == 'Rods'])
+    Tubing = pd.DataFrame(df[df['FAILURETYPE'] == 'Tubing'])
     normalized_data = Rods
     maxSize = len(Rods.index)
     
