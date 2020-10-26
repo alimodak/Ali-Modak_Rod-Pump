@@ -56,9 +56,12 @@ def generate_candidate_dataset(data_in, COLUMN_DROP_THRESHOLD, COLUMN_IMPUTE_THR
     categorical_columns = [col for col in this_data.columns if this_data[col].dtypes == 'O']
     quantitative_columns = [col for col in this_data.columns if this_data[col].dtypes == 'float']
 
-    imputer = KNNImputer(n_neighbors=neighbors)
-    imputer.fit(this_data[quantitative_columns])
-    this_data[quantitative_columns] = imputer.transform(this_data[quantitative_columns])
+    try:
+        imputer = KNNImputer(n_neighbors=neighbors)
+        imputer.fit(this_data[quantitative_columns])
+        this_data[quantitative_columns] = imputer.transform(this_data[quantitative_columns])
+    except:
+        pass
 
     for column in this_data:
         if (column in categorical_columns):
@@ -116,22 +119,22 @@ def normalize(dfBig, dfSmall, maxSize):
     return dfBig
 
 def balance(this_data):
-    # FAILURETYPE key reference
-    # Key 2: Tubing
-    # Key 1: Sucker Rod Pump
-    # Key 0: Rod
-
     # create a dictionary with value_counts for each failuretype
     frequencies = this_data['FAILURETYPE'].value_counts(normalize=True).to_dict()
+
     # identify which failuretype has the least number of occurances
     min_key = min(frequencies, key=frequencies.get)
+
     # extract the count of occurances for the least common failuretype
     min_count = this_data['FAILURETYPE'].value_counts()[min_key]
 
+
     # create a list of unique failuretypes present
     unique_types = this_data['FAILURETYPE'].unique()
+
     # create an empty dataframe
     this_sample = pd.DataFrame()
+
     # append a random sample of size min_count from each failuretype to the new dataframe
     for this_type in unique_types:
         sample = this_data[ this_data['FAILURETYPE'] == this_type ].sample(n=min_count)
