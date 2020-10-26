@@ -84,24 +84,26 @@ def fullNormData(df):
     normalized_data = Rods
     maxSize = len(Rods.index)
     
-
-    def normalize(df,maxSize):
-        global normalized_data
-        for i in range(1,maxSize+1):
-            randRowNum = random.randint(0,len(df.index))
-            normalized_data = normalized_data.append(df.iloc[randRowNum,:])
-            df = df.drop(df.index[randRowNum])
-
-            #shuffle rows in df
-            df = df.sample(frac=1).reset_index(drop=True)
+  
      
-    normalize(SRP, maxSize)
-    normalize(Tubing, maxSize)
+    normalized_data = normalize(normalized_data, SRP, maxSize)
+    normalized_data = normalize(normalized_data, Tubing, maxSize)
 
-    #shuffle rows in new df
+    #shuffle rows in new norm data
     normalized_data.sample(frac=1).reset_index(drop=True)
     
     return normalized_data
+
+def normalize(dfBig, dfSmall, maxSize):
+    for i in range(1,maxSize+1):
+        randRowNum = random.randint(0,len(dfSmall.index)) #selects randrow in unnorm data
+        dfBig = dfBig.append(dfSmall.iloc[randRowNum,:]) #adds that row to norm data
+        dfSmall = dfSmall.drop(dfSmall.index[randRowNum]) #drops that row from unnorm data
+
+        #shuffle rows in unnorm data 
+        dfSmall = dfSmall.sample(frac=1).reset_index(drop=True)
+        
+    return dfBig
 
 def balance(this_data):
     # FAILURETYPE key reference
