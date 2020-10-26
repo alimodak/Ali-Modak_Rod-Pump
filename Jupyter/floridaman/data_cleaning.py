@@ -87,7 +87,7 @@ def fullNormData(df):
     if SRP.index < Rods.index and SRP.index < Tubing.index:
         normalized_data = SRP
         maxSize = len(SRP.index)
-    else if Tubing.index < Rods.index and Tubing.index < SRP.index:
+    elif Tubing.index < Rods.index and Tubing.index < SRP.index:
         normalized_data = Tubing
         maxSize = len(Tubing.index)
     else:
