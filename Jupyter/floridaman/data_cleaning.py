@@ -90,7 +90,7 @@ def fullNormData(df):
     normalized_data = normalize(normalized_data, Tubing, maxSize)
 
     #shuffle rows in new norm data
-    normalized_data.sample(frac=1).reset_index(drop=True)
+    normalized_data = normalized_data.sample(frac=1).reset_index(drop=True)
     
     return normalized_data
 
