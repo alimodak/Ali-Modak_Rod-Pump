@@ -81,8 +81,18 @@ def fullNormData(df):
     SRP = pd.DataFrame(df[df['FAILURETYPE'] == 'Sucker Rod Pump'])
     Rods = pd.DataFrame(df[df['FAILURETYPE'] == 'Rods'])
     Tubing = pd.DataFrame(df[df['FAILURETYPE'] == 'Tubing'])
-    normalized_data = Rods
-    maxSize = len(Rods.index)
+    maxSize = 0
+    normalized_data=0
+    
+    if (SRP.index < Rods.index) && (SRP.index < Tubing.index):
+        normalized_data = SRP
+        maxSize = len(SRP.index)
+    else if (Tubing.index < Rods.index) && (Tubing.index < SRP.index):
+        normalized_data = Tubing
+        maxSize = len(Tubing.index)
+    else:
+        normalized_data = Rods
+        maxSize = len(Rods.index)
     
   
      
