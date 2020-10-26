@@ -77,9 +77,6 @@ def features(df):
     return features
 
 
-
-
-
 def fullNormData(df):
     SRP = pd.DataFrame(df[df['FAILURETYPE'] == 'Sucker Rod Pump'])
     Rods = pd.DataFrame(df[df['FAILURETYPE'] == 'Rods'])
@@ -105,3 +102,27 @@ def fullNormData(df):
     normalized_data.sample(frac=1).reset_index(drop=True)
     
     return normalized_data
+
+def balance(this_data):
+    # FAILURETYPE key reference
+    # Key 2: Tubing
+    # Key 1: Sucker Rod Pump
+    # Key 0: Rod
+
+    # create a dictionary with value_counts for each failuretype
+    frequencies = this_data['FAILURETYPE'].value_counts(normalize=True).to_dict()
+    # identify which failuretype has the least number of occurances
+    min_key = min(frequencies, key=frequencies.get)
+    # extract the count of occurances for the least common failuretype
+    min_count = this_data['FAILURETYPE'].value_counts()[min_key]
+
+    # create a list of unique failuretypes present
+    unique_types = this_data['FAILURETYPE'].unique()
+    # create an empty dataframe
+    this_sample = pd.DataFrame()
+    # append a random sample of size min_count from each failuretype to the new dataframe
+    for this_type in unique_types:
+        sample = this_data[ this_data['FAILURETYPE'] == this_type ].sample(n=min_count)
+        this_sample = this_sample.append(sample)
+
+    return this_sample
