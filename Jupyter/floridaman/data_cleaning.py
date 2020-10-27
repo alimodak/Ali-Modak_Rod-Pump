@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OneHotEncoder
 from sklearn.impute import KNNImputer
 from floridaman.metrics import getPercentNull
 import numpy as np
@@ -37,6 +38,15 @@ def encode(df, column):
     # print('')
     return df
 
+def encode(df):
+    categorical_columns = [col for col in df.columns if df[col].dtypes == 'O']
+    categorical_columns.remove('UWI')
+    categorical_columns.remove('roduid')
+    categorical_columns.remove('FAILURETYPE')
+
+    df = pd.get_dummies(df, columns=categorical_columns)
+    return df
+
 def generate_candidate_dataset(data_in, COLUMN_DROP_THRESHOLD, COLUMN_IMPUTE_THRESHOLD, neighbors):
     this_data = data_in.copy()
     categorical_columns = [col for col in this_data.columns if this_data[col].dtypes == 'O']
@@ -63,9 +73,11 @@ def generate_candidate_dataset(data_in, COLUMN_DROP_THRESHOLD, COLUMN_IMPUTE_THR
     except:
         pass
 
-    for column in this_data:
-        if (column in categorical_columns):
-            encode(this_data, column)
+    this_data = encode(this_data)
+
+    # for column in this_data:
+    #     if (column in categorical_columns):
+    #         encode(this_data, column)
     
     return this_data
 
