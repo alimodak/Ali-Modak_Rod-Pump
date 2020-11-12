@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import StandardScaler
 from sklearn.impute import KNNImputer
 from floridaman.metrics import getPercentNull
 import numpy as np
@@ -65,14 +66,17 @@ def generate_candidate_dataset(data_in, COLUMN_DROP_THRESHOLD, COLUMN_IMPUTE_THR
 
     categorical_columns = [col for col in this_data.columns if this_data[col].dtypes == 'O']
     quantitative_columns = [col for col in this_data.columns if this_data[col].dtypes == 'float']
-
+    
     try:
         imputer = KNNImputer(n_neighbors=neighbors)
-        imputer.fit(this_data[quantitative_columns])
+        imputer.fit_transform(this_data[quantitative_columns])
         this_data[quantitative_columns] = imputer.transform(this_data[quantitative_columns])
     except:
         pass
 
+    scaler = StandardScaler()
+    this_data[quantitative_columns] = scaler.fit_transform(this_data[quantitative_columns])
+    
     this_data = encode(this_data)
 
     # for column in this_data:
