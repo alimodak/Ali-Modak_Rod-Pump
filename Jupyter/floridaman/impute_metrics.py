@@ -4,9 +4,7 @@ from floridaman import data_cleaning
 from floridaman import metrics
 from sklearn.impute import KNNImputer
 
-def run_test(df, COLUMN_DROP_THRESHOLD, target_column, neighbors):
-    categorical_columns = [col for col in df.columns if df[col].dtypes == 'O']
-
+def score (df, target_column, COLUMN_DROP_THRESHOLD, neighbors):
     for column in df:
         this_percent_null = metrics.getPercentNull(df, column)
         
@@ -14,33 +12,37 @@ def run_test(df, COLUMN_DROP_THRESHOLD, target_column, neighbors):
             del df[column]
         else:
             df.dropna(subset=[column], axis=0, inplace=True)
-            
-    categorical_columns = [col for col in df.columns if df[col].dtypes == 'O']
+
     quantitative_columns = [col for col in df.columns if df[col].dtypes == 'float']
 
-    imputer = KNNImputer(n_neighbors=neighbors)
-    imputer.fit(df[quantitative_columns])
+    df = df[quantitative_columns]
 
-    source_data = df.copy()
+    imputer = KNNImputer(n_neighbors=neighbors, copy=False)
+    imputer.fit(df)
+
+    source_data = df
     test_data = df.copy()
 
     sample_set = test_data.sample(frac=.2).index
     test_data.loc[sample_set, target_column] = np.nan
 
-    test_data['isImputed'] = False
-    test_data.loc[sample_set, 'isImputed'] = True
-
+    imputer.transform(test_data)
+    
     results = pd.DataFrame(columns=['imputed','source'])
-
-    test_data[quantitative_columns] = imputer.transform(test_data[quantitative_columns])
-    results['imputed'] = test_data[target_column][test_data['isImputed'] == True]
-    results['source'] = source_data[target_column][test_data['isImputed'] == True]
+    results['imputed'] = test_data.loc[sample_set, target_column]
+    results['source'] = source_data.loc[sample_set, target_column]
     results['diff'] = results['imputed'] - results['source']
 
-    return(results['diff'])
+    return(results)
 
-def get_stddev(df, COLUMN_DROP_THRESHOLD, target_column, neighbors):
-    results = []
-    for i in range(1, 8):
-        results.append(run_test(df, COLUMN_DROP_THRESHOLD, target_column, neighbors).std())
-    return results
+
+def score_column (df, target_column, THRESHOLD):
+    results = score(df, target_column, THRESHOLD, 5)
+
+    print( df[target_column].describe() )
+    print('')
+    print( "StdDev: " + str(round(results['diff'].std(), 2)) )
+    print( results['imputed'].quantile([.25, .5, .75]) )
+
+    df[target_column].hist()
+    results['imputed'].hist()
