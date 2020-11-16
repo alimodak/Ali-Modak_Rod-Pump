@@ -37,7 +37,11 @@ def score (df, target_column, COLUMN_DROP_THRESHOLD, neighbors):
 
 
 def score_column (df, target_column, THRESHOLD):
-    results = score(df, target_column, THRESHOLD, 5)
+    results = []
+    for i in range(1, 8):
+        results.append( score(df, target_column, THRESHOLD, 5) )
+
+    results = pd.concat(results)
 
     print( df[target_column].describe() )
     print('')
