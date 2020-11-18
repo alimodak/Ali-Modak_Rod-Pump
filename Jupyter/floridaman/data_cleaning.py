@@ -85,6 +85,42 @@ def generate_candidate_dataset(data_in, COLUMN_DROP_THRESHOLD, COLUMN_IMPUTE_THR
     
     return this_data
 
+def drop_columns(data_in, COLUMN_DROP_THRESHOLD, COLUMN_IMPUTE_THRESHOLD):
+    this_data = data_in.copy()
+    categorical_columns = [col for col in this_data.columns if this_data[col].dtypes == 'O']
+    quantitative_columns = [col for col in this_data.columns if this_data[col].dtypes == 'float']
+
+    for column in this_data:
+        this_percent_null = getPercentNull(this_data, column)
+
+        if (this_percent_null >= COLUMN_DROP_THRESHOLD):
+            del this_data[column]
+        elif (this_percent_null >= COLUMN_IMPUTE_THRESHOLD):
+            this_data.dropna(subset=[column], axis=0, inplace=True)
+        else:
+            if (column in categorical_columns):
+                this_data.dropna(subset=[column], axis=0, inplace=True)
+
+    this_data = encode(this_data)
+
+    return this_data
+
+def impute_values(data_in, neighbors):
+    this_data = data_in.copy()
+    quantitative_columns = [col for col in this_data.columns if this_data[col].dtypes == 'float']
+    
+    try:
+        imputer = KNNImputer(n_neighbors=neighbors)
+        imputer.fit_transform(this_data[quantitative_columns])
+        this_data[quantitative_columns] = imputer.transform(this_data[quantitative_columns])
+    except:
+        pass
+
+    scaler = StandardScaler()
+    this_data[quantitative_columns] = scaler.fit_transform(this_data[quantitative_columns])
+
+    return this_data
+
 def features(df):
     features = list(df)
     to_remove = ['FAILURETYPE', 'roduid', 'UWI', 'lifetime_start', 'lifetime_end']
