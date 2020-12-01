@@ -116,8 +116,7 @@ def impute_values(data_in, neighbors):
     except:
         pass
 
-    scaler = StandardScaler()
-    this_data[quantitative_columns] = scaler.fit_transform(this_data[quantitative_columns])
+    
 
     return this_data
 
