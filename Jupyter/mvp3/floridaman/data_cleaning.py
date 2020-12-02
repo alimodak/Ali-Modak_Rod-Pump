@@ -74,8 +74,8 @@ def generate_candidate_dataset(data_in, COLUMN_DROP_THRESHOLD, COLUMN_IMPUTE_THR
     except:
         pass
 
-    scaler = StandardScaler()
-    this_data[quantitative_columns] = scaler.fit_transform(this_data[quantitative_columns])
+#     scaler = StandardScaler()
+#     this_data[quantitative_columns] = scaler.fit_transform(this_data[quantitative_columns])
     
     this_data = encode(this_data)
 
